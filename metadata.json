@@ -14,7 +14,7 @@
     "ServiceTypes": ["KWin/Script"],
     "Version": "1.0",
     "Licsense": "GPLv3",
-    "Website": "https://github.com/fish22/abovelatte"
+    "Website": "https://github.com/fish22/abovelatte.git"
   },
   "X-Plasma-API": "javascript",
   "X-Plasma-MainScript": "code/main.js"

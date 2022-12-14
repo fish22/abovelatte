@@ -1,0 +1,21 @@
+{
+  "KPlugin": {
+    "Name": "Above Latte",
+    "Description": "Keeps windows above latte-dock in wayland where it does not happen automatically",
+    "Icon": "preferences-system-windows",
+
+    "Authors": [
+      {
+        "Email": "fish22@users.noreply.github.com",
+        "Name": "Alex Nganga"
+      }
+    ],
+    "Id": "abovelatte",
+    "ServiceTypes": ["KWin/Script"],
+    "Version": "1.0",
+    "Licsense": "GPLv3",
+    "Website": "https://github.com/fish22/abovelatte"
+  },
+  "X-Plasma-API": "javascript",
+  "X-Plasma-MainScript": "code/main.js"
+}

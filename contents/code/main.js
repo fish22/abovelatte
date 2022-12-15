@@ -32,9 +32,3 @@ workspace.clientMaximizeSet.connect(function (client, h, v) {
   }
 });
 
-workspace.clientActivated.connect(function (client, h, v) {
-  if (!client || !client.normalWindow) {
-    return;
-  }
-  processClient(client, "clientActivated");
-});

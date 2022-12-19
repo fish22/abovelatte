@@ -32,3 +32,22 @@ workspace.clientMaximizeSet.connect(function (client, h, v) {
   }
 });
 
+// Redo clients if Latte Dock is restarted...
+var redoClients = false;
+workspace.clientAdded.connect(function (client) {
+  if (client.caption === "Latte Dock" && client.dock && redoClients) {
+    print("Latte Dock added. Will processing windows");
+    const clients = workspace.clientList();
+    for (var i = 0; i < clients.length; i++) {
+      print("Latte Dock added. Processing window: " + clients[i].caption);
+      processClient(clients[i], "latteDockAdded");
+    }
+    redoClients = false;
+  }
+});
+
+workspace.clientRemoved.connect(function (client) {
+  if (client.caption === "Latte Dock" && client.dock) {
+    redoClients = true;
+  }
+});
